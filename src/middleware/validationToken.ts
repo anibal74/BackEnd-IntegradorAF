@@ -20,7 +20,7 @@ export const validatioToken = (req: Request,res:Response,nxt: NextFunction) =>{
 
     } catch (error) {
         console.log(error);
-        res.status(500).json({msg: 'Server Error'});
+        res.status(CodesHttpEnum.internalServerError).json({msg: 'Server Error'});
     }
     
 }

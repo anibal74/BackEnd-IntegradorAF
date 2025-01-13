@@ -20,7 +20,7 @@ async function main() {
   try {
     await db.authenticate();
     
-    /* await db.sync({ alter: true }) */ // ! La sincronización con el force en true, puede eliminar registros o columnas
+    await db.sync({ alter: true });  // ! La sincronización con el force en true, puede eliminar registros o columnas
     console.log("Conexión establecida con la BD.");
   } catch (error) {
     console.error("Ocurrio un error al conectarse con la BD:", error);
