@@ -11,11 +11,11 @@ export default class UserRepository {
         }
     }
 
-    async FindUserByEmail(email: string){
+    async FindUserByEmail(username: string){
         try {
             return await models.Usuario.findOne({
                 where: {
-                    email
+                    username
                 }
             })
         } catch (error) {

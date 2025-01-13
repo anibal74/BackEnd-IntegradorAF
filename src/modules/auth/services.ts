@@ -39,8 +39,8 @@ export class AuthServices {
     );
   }
 
-  async loginService(email: string, password: string) {
-    const allUser = await this._userRepository.FindUserByEmail(email);
+  async loginService(username: string, password: string) {
+    const allUser = await this._userRepository.FindUserByEmail(username);
     if (!allUser) {
       throw new Error("El usuario no existe");
     }
